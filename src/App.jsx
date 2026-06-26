@@ -7,7 +7,8 @@ import Schedule from './pages/Schedule';
 import Standings from './pages/Standings';
 import Stats from './pages/Stats';
 import Recaps from './pages/Recaps';
-import Tournament from './pages/Tournament'; // Import the new page
+import Tournament from './pages/Tournament';
+import Playoffs from './pages/Playoffs';
 import './App.css';
 
 function App() {
@@ -20,10 +21,11 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/rosters" element={<Rosters />} />
             <Route path="/schedule" element={<Schedule />} />
-            <Route path="/standings" element={<Standings />} /> 
-            <Route path="/stats" element={<Stats />} /> 
+            <Route path="/standings" element={<Standings />} />
+            <Route path="/stats" element={<Stats />} />
             <Route path="/recaps" element={<Recaps />} />
-            <Route path="/tournament" element={<Tournament />} /> {/* Register the route */}
+            <Route path="/tournament" element={<Tournament />} />
+            <Route path="/playoffs" element={<Playoffs />} />
           </Routes>
         </main>
         <Footer />

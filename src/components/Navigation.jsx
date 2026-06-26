@@ -7,15 +7,16 @@ const Navigation = () => {
   const location = useLocation();
   const [isNavExpanded, setIsNavExpanded] = useState(false);
 
-const navLinks = [
-  { name: 'Home', path: '/' },
-  { name: 'Rosters', path: '/rosters' },
-  { name: 'Schedule', path: '/schedule' },
-  { name: 'Standings', path: '/standings' },
-  { name: 'Stats', path: '/stats' },
-  { name: 'Recaps', path: '/recaps' },
-  { name: 'Tournament', path: '/tournament' }, 
-];
+  const navLinks = [
+    { name: 'Home', path: '/' },
+    { name: 'Rosters', path: '/rosters' },
+    { name: 'Schedule', path: '/schedule' },
+    { name: 'Standings', path: '/standings' },
+    { name: 'Stats', path: '/stats' },
+    { name: 'Recaps', path: '/recaps' },
+    { name: 'Tournament', path: '/tournament' },
+    { name: 'Playoffs', path: '/playoffs' },
+  ];
 
   return (
     <>

@@ -11,18 +11,21 @@ const Home = () => {
 
   return (
     <div style={pageWrapper}>
-      {/* Added hero-mobile-adjust class for CSS overrides */}
       <div style={heroSection} className="hero-mobile-adjust">
         <div style={heroOverlay}>
 
-          <div className="d-flex gap-3 justify-content-center mt-4">
+          <div className="d-flex gap-3 justify-content-center mt-4 flex-wrap">
             <Button as={Link} to="/recaps" variant="danger" size="lg" className="fw-black shadow">
               GAME RECAPS
             </Button>
             <Button as={Link} to="/stats" variant="outline-light" size="lg" className="fw-black shadow">
               LEAGUE STATS
             </Button>
+            <Button as={Link} to="/playoffs" variant="outline-light" size="lg" className="fw-black shadow">
+              🏆 PLAYOFFS
+            </Button>
           </div>
+
         </div>
       </div>
 
@@ -30,10 +33,10 @@ const Home = () => {
         <Row className="g-4 justify-content-center">
           {navCards.map((card, idx) => (
             <Col key={idx} xs={12} md={4}>
-              <Card 
-                as={Link} 
-                to={card.path} 
-                style={cardStyle} 
+              <Card
+                as={Link}
+                to={card.path}
+                style={cardStyle}
                 className="h-100 text-decoration-none"
               >
                 <Card.Body className="d-flex flex-column align-items-center justify-content-center py-5">
@@ -56,10 +59,10 @@ const pageWrapper = {
 };
 
 const heroSection = {
-  height: '40vh', // Desktop height reverted
+  height: '40vh',
   backgroundImage: 'url("/revolutionHero.png")',
   backgroundSize: 'cover',
-  backgroundPosition: 'top', // Orientation focused on the hoop
+  backgroundPosition: 'top',
   position: 'relative',
 };
 

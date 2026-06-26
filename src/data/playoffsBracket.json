@@ -1,0 +1,61 @@
+{
+  "rounds": [
+    {
+      "name": "First Round",
+      "games": [
+        {
+          "id": "playoffs-r1-g1",
+          "time": "Game 1",
+          "matchup": "Team A vs. Team B",
+          "seeds": [1, 8]
+        },
+        {
+          "id": "playoffs-r1-g2",
+          "time": "Game 2",
+          "matchup": "Team C vs. Team D",
+          "seeds": [4, 5]
+        },
+        {
+          "id": "playoffs-r1-g3",
+          "time": "Game 3",
+          "matchup": "Team E vs. Team F",
+          "seeds": [3, 6]
+        },
+        {
+          "id": "playoffs-r1-g4",
+          "time": "Game 4",
+          "matchup": "Team G vs. Team H",
+          "seeds": [2, 7]
+        }
+      ]
+    },
+    {
+      "name": "Semifinals",
+      "games": [
+        {
+          "id": "playoffs-r2-g1",
+          "time": "Game 5",
+          "matchup": "Winner G1 vs. Winner G2",
+          "seeds": null
+        },
+        {
+          "id": "playoffs-r2-g2",
+          "time": "Game 6",
+          "matchup": "Winner G3 vs. Winner G4",
+          "seeds": null
+        }
+      ]
+    },
+    {
+      "name": "Championship",
+      "games": [
+        {
+          "id": "playoffs-r3-g1",
+          "time": "Championship",
+          "matchup": "Winner SF1 vs. Winner SF2",
+          "seeds": null
+        }
+      ]
+    }
+  ]
+}
