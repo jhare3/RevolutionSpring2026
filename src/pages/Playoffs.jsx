@@ -3,6 +3,7 @@ import { Badge, Spinner, Container } from 'react-bootstrap';
 import TournamentBoxscoreModal from '../components/TournamentBoxscoreModal';
 import bracketData from '../data/playoffsBracket.json';
 
+// Import playoff JSON files directly from the directory
 const playoffFiles = import.meta.glob('../data/Playoffs/*.json', { eager: true });
 
 const Playoffs = () => {
@@ -42,6 +43,7 @@ const Playoffs = () => {
           if (i > 0) {
             const prevName = rawData.stats[i - 1]["Player Name"].toLowerCase();
             const currName = rawData.stats[i]["Player Name"].toLowerCase();
+            // Alphabetical reset detected, switch to Team 2
             if (currName.localeCompare(prevName) < 0 && !isTeam2) {
               isTeam2 = true;
             }
@@ -63,8 +65,16 @@ const Playoffs = () => {
         visitor_stats: team1Stats,
         home_stats: team2Stats,
         scores: {
-          [team1Name]: rawData.scores?.team1,
-          [team2Name]: rawData.scores?.team2
+          [team1Name]: { 
+            "1": rawData.scores?.team1?.half1, 
+            "2": rawData.scores?.team1?.half2, 
+            "Total": rawData.scores?.team1?.final 
+          },
+          [team2Name]: { 
+            "1": rawData.scores?.team2?.half1, 
+            "2": rawData.scores?.team2?.half2, 
+            "Total": rawData.scores?.team2?.final 
+          }
         }
       };
 
@@ -87,11 +97,14 @@ const Playoffs = () => {
 
   return (
     <Container fluid className="py-5 bg-light min-vh-100">
+
+      {/* Page Header */}
       <div className="text-center mb-5">
         <h1 className="schedule-page-heading">Revolution Playoffs</h1>
         <span className="schedule-subtext">Road to the Championship</span>
       </div>
 
+      {/* Highlights Section */}
       <div className="highlights-grid-container" style={imageGalleryGrid}>
         <div style={leftStack}>
           <div style={imageWrapper}>
@@ -101,6 +114,7 @@ const Playoffs = () => {
         </div>
       </div>
 
+      {/* Bracket */}
       {loading ? (
         <div className="text-center py-5">
           <Spinner animation="border" variant="danger" />
@@ -173,6 +187,7 @@ const Playoffs = () => {
   );
 };
 
+// Layout Styles
 const imageGalleryGrid = { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '30px', marginBottom: '60px', maxWidth: '1200px', margin: '0 auto 60px auto' };
 const leftStack = { display: 'flex', flexDirection: 'column', gap: '30px' };
 const imageWrapper = { width: '100%', textAlign: 'center' };
