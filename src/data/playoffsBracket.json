@@ -1,59 +1,82 @@
 {
   "rounds": [
     {
-      "name": "First Round",
+      "name": "First Round (June 20)",
       "games": [
         {
-          "id": "playoffs-r1-g1",
-          "time": "Game 1",
-          "matchup": "Team A vs. Team B",
-          "seeds": [1, 8]
-        },
-        {
-          "id": "playoffs-r1-g2",
-          "time": "Game 2",
-          "matchup": "Team C vs. Team D",
+          "id": "ORANGE_vs__BLUE__6_20_26__8-00_AM",
+          "time": "8:00 AM",
+          "matchup": "ORANGE vs. BLUE",
           "seeds": [4, 5]
         },
         {
-          "id": "playoffs-r1-g3",
-          "time": "Game 3",
-          "matchup": "Team E vs. Team F",
-          "seeds": [3, 6]
+          "id": "GRAY_vs__PURPLE__6_20_26__9-00_AM",
+          "time": "9:00 AM",
+          "matchup": "GRAY vs. PURPLE",
+          "seeds": [3, 2]
         },
         {
-          "id": "playoffs-r1-g4",
-          "time": "Game 4",
-          "matchup": "Team G vs. Team H",
-          "seeds": [2, 7]
+          "id": "YELLOW_vs__RED__6_20_26__11-06_AM",
+          "time": "11:06 AM",
+          "matchup": "YELLOW vs. RED",
+          "seeds": [3, 5]
+        },
+        {
+          "id": "PINK_vs__TAN__6_20_26__12-13_PM",
+          "time": "12:13 PM",
+          "matchup": "PINK vs. TAN",
+          "seeds": [4, 6]
         }
       ]
     },
     {
-      "name": "Semifinals",
+      "name": "Quarterfinals (June 20)",
       "games": [
         {
-          "id": "playoffs-r2-g1",
-          "time": "Game 5",
-          "matchup": "Winner G1 vs. Winner G2",
-          "seeds": null
+          "id": "RED_vs__GREEN__6_20_26__1-15_PM",
+          "time": "1:15 PM",
+          "matchup": "RED vs. GREEN",
+          "seeds": [5, 1]
         },
         {
-          "id": "playoffs-r2-g2",
-          "time": "Game 6",
-          "matchup": "Winner G3 vs. Winner G4",
-          "seeds": null
+          "id": "PINK_vs__BLACK__6_20_26__2-08_PM",
+          "time": "2:08 PM",
+          "matchup": "PINK vs. BLACK",
+          "seeds": [4, 2]
+        },
+        {
+          "id": "WHITE_vs__ORANGE__MISSING",
+          "time": "MISSING",
+          "matchup": "WHITE vs. ORANGE",
+          "seeds": [1, 4]
         }
       ]
     },
     {
-      "name": "Championship",
+      "name": "Semifinals (June 21)",
       "games": [
         {
-          "id": "playoffs-r3-g1",
-          "time": "Championship",
-          "matchup": "Winner SF1 vs. Winner SF2",
-          "seeds": null
+          "id": "BLACK_vs__GREEN__6_21_26__11-00_AM",
+          "time": "11:00 AM",
+          "matchup": "BLACK vs. GREEN",
+          "seeds": [2, 1]
+        },
+        {
+          "id": "WHITE_vs__GRAY__6_21_26__12-04_PM",
+          "time": "12:04 PM",
+          "matchup": "WHITE vs. GRAY",
+          "seeds": [1, 3]
+        }
+      ]
+    },
+    {
+      "name": "Championship (June 21)",
+      "games": [
+        {
+          "id": "GREEN_vs__GRAY__6_21_26__1-11_PM",
+          "time": "1:11 PM",
+          "matchup": "GREEN vs. GRAY",
+          "seeds": [1, 3]
         }
       ]
     }
